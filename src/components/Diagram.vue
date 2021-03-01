@@ -1,15 +1,21 @@
 <template>
   <div class="Diagram">
-    <svg></svg>
-    <Category
-      v-for="(category, index) in data.categories"
-      :title="category.title"
-      :theme="theme"
-      :valueText="category.valueText"
-      :differenceText="category.differenceText"
-      :key="index"
-      :index="index"
-    ></Category>
+    <div class="Diagram__wrapper">
+      <svg></svg>
+      <div class="Diagram__totalText">{{ data.totalText }}</div>
+      <div class="Diagram__differenceText">{{ data.differenceText }}</div>
+    </div>
+    <div class="Diagram__category">
+      <Category
+        v-for="(category, index) in data.categories"
+        :title="category.title"
+        :theme="theme"
+        :valueText="category.valueText"
+        :differenceText="category.differenceText"
+        :key="index"
+        :index="index"
+      ></Category>
+    </div>
   </div>
 </template>
 <script>
@@ -35,7 +41,7 @@ export default {
         ? (this.min = this.data.categories[item].valueText.split(" ")[0])
         : ""
     ),
-    this.svg()
+      this.svg();
   },
   methods: {
     svg() {
@@ -67,8 +73,6 @@ export default {
           "radial-gradient8",
         ]);
       let defs = group.append("defs");
-      
-      
 
       let radialGradient1 = defs
         .append("radialGradient")
@@ -121,11 +125,11 @@ export default {
       let radialGradient5 = defs
         .append("radialGradient")
         .attr("id", "radial-gradient5")
-        .attr("cx", "57%")
+        .attr("cx", "57%");
       radialGradient5
         .append("stop")
         .attr("offset", "0")
-        .attr("stop-color", "rgba(255, 163, 0, 1)")
+        .attr("stop-color", "rgba(255, 163, 0, 1)");
       radialGradient5
         .append("stop")
         .attr("offset", "100%")
@@ -134,7 +138,7 @@ export default {
       let radialGradient6 = defs
         .append("radialGradient")
         .attr("id", "radial-gradient6")
-        .attr("cy", "50%")
+        .attr("cy", "50%");
       radialGradient6
         .append("stop")
         .attr("offset", "0%")
@@ -174,7 +178,7 @@ export default {
         .outerRadius(r)
         .padAngle(0.02)
         .cornerRadius(8);
-      let pie = d3.layout.pie().value(function(d) {
+      let pie = d3.layout.pie().value(function (d) {
         return d;
       });
 
@@ -188,11 +192,43 @@ export default {
       arcs
         .append("path")
         .attr("d", arc)
-        .attr("fill", function(d) {
+        .attr("fill", function (d) {
           return `url(#${color_black(d.data)})`;
         });
     },
   },
 };
 </script>
-<style lang="sass"></style>
+<style lang="sass">
+.diagram_template
+  display: flex
+  flex-direction: column
+.Diagram
+  display: flex
+  justify-content: space-around
+  align-items: center
+  flex-grow: 1
+  &__wrapper
+    width: 240px
+    height: 240px
+    position: relative
+  &__totalText, &__differenceText
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  &__totalText
+    top: 40%
+    font-weight: 700
+    font-size: 20px
+    line-height: 22px
+    text-align: center
+    color: #FCFBF7
+  &__differenceText
+    top: 60%
+    font-weight: 500
+    font-size: 16px
+    line-height: 18px
+    text-align: center
+    color: #918F8A
+</style>
