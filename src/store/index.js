@@ -33,6 +33,9 @@ const store = new Vuex.Store({
   getters: {
     isStateData(state){
       return Object.keys(state.data).length
+    },
+    aliasAnddata(state){
+      return [state.data[router.history.current.query['slide']-1].alias, state.data[router.history.current.query['slide']-1].data]
     }
   },
 })
