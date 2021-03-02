@@ -2,8 +2,8 @@
   <div class="vote">
     <User
       v-for="(user, index) in data.users.slice(
-        this.$store.state.data[[this.$route.query['slide'] - 1]].data.offset,
-        this.$store.state.data[this.$route.query['slide'] - 1].data.offset + i
+        data.offset,
+        data.offset + i
       )"
       :key="user.id"
       :id="user.id"
@@ -24,12 +24,12 @@
           'vote-button__up_wrapper_' + theme,
           {
             'vote-button__up_wrapper_light_not':
-              this.$store.state.data[this.$route.query['slide'] - 1].data
+              data
                 .offset == 0 && theme == 'light',
           },
           {
             'vote-button__up_wrapper_dark_not':
-              this.$store.state.data[this.$route.query['slide'] - 1].data
+              data
                 .offset == 0 && theme == 'dark',
           },
         ]"
@@ -44,13 +44,13 @@
           {
             'vote-button__down_wrapper_light_not':
               Object.keys(this.data.users).length - this.i ==
-                this.$store.state.data[this.$route.query['slide'] - 1].data
+                data
                   .offset && theme == 'light',
           },
           {
             'vote-button__down_wrapper_dark_not':
               Object.keys(this.data.users).length - this.i ==
-                this.$store.state.data[this.$route.query['slide'] - 1].data
+                data
                   .offset && theme == 'dark',
           },
         ]"

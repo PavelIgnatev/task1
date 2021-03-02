@@ -1,27 +1,6 @@
 <template>
   <div :class="['template', 'theme_' + theme, alias + '_template']">
     <Title :alias="alias" :data="data" :theme="theme"></Title>
-    <!-- <router-link
-      :to="`/?slide=${Number(Number($route.query['slide']) - 1)}&theme=${
-        $route.query['theme'] ? $route.query['theme'] : 'dark'
-      }`"
-      class="button__back"
-      >НАЗАД</router-link
-    >
-    <router-link
-      :to="`/?slide=${Number(Number($route.query['slide']) + 1)}&theme=${
-        $route.query['theme'] ? $route.query['theme'] : 'dark'
-      }`"
-      class="button__forward"
-      >ВПЕРЁД</router-link
-    >
-    <router-link
-      :to="`/?slide=1&theme=${
-        $route.query['theme'] ? $route.query['theme'] : 'dark'
-      }`"
-      class="button__top"
-      >В НАЧАЛО</router-link
-    > -->
     <Leaders
       :alias="alias"
       :data="data"
@@ -71,7 +50,7 @@ export default {
       const indexUser = Object.keys(this.data.users).find(
         (item) =>
           this.data.users[item].id ==
-          this.$store.state.data[this.$route.query["slide"] - 1].data
+          this.data
             .selectedUserId
       );
       return indexUser ? Number(indexUser) : "-1";
@@ -80,33 +59,12 @@ export default {
       const indexUser = Object.keys(this.data.users).find(
         (item) =>
           this.data.users[item].id ==
-          this.$store.state.data[this.$route.query["slide"] - 1].data
+          this.data
             .selectedUserId
       );
       return indexUser ? Number(indexUser) : "-1";
     },
-    //timer() {
-    //  if (this.time === 0) {
-    //    this.time = setInterval(() => {
-    //      if (this.tick === 7) {
-    //        this.$router.push(
-    //           `/?slide=${Number(
-    //            Number(this.$route.query["slide"]) + 1
-    //          )}&theme=${
-    //            this.$route.query["theme"] ? this.$route.query["theme"] : "dark"
-    //           }`
-    //        );
-    //        this.tick = 0;
-    //      } else {
-    //        this.tick++;
-    //      }
-    //    }, 1000);
-    //  }
-    //},
-    //clearTimer() {
-    //  clearInterval(this.time);
-    //  this.time = 0;
-    //},
+
   },
   components: { Title, Leaders, Vote, Chart, Diagram, Activity },
 };
@@ -114,19 +72,6 @@ export default {
 <style lang="sass">
 @import '@/assets/sass/_variables'
 
-// .button
-//   &__back, &__forward, &__top
-//     position: absolute
-//     width: 100px
-//     text-align: center
-//     height: 40px
-//     transform: translateX(-50%)
-//   &__back
-//     left: 50%
-//   &__forward
-//     left: 25%
-//   &__top
-//     left: 75%
 .invert_1
   filter: invert(1)
 .theme_light
