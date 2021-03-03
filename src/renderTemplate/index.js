@@ -4,14 +4,14 @@ const renderTemplateAll = (data) => store.commit("renderTemplateAll", data)
 renderTemplateAll(data2)
 window.renderTemplateAll = renderTemplateAll
 
-function selected(users, id) {
+function selected(users, id = -1) {
     const indexUser = Object.keys(users).find(
-      (item) =>
+        (item) =>
         users[item].id ==
         id
     );
-    return indexUser
-  }
+    return indexUser ? Number(indexUser) : -1
+}
 
 
 const Template = (alias, data) => {
@@ -23,7 +23,7 @@ const Template = (alias, data) => {
         `
 }
 
-const User = (alias, user, selectedUserId=-1, place, index, emoji) => {
+const User = (alias, user, selectedUserId = -1, place = -2, index, emoji) => {
     return `
     <div class="user-template ${alias}-user ${selectedUserId == user['id'] && place != 0 && place != 1 && place != 2 ? 'user-selected' : ''}">
         <div class="user-img ${alias}-img">
@@ -33,12 +33,18 @@ const User = (alias, user, selectedUserId=-1, place, index, emoji) => {
         <div class="user-name ${alias}-name">${user.name.split(' ')[0]}<br>${user.name.split(' ')[1]}</div>
         <div class="user-value ${alias}-value">${user.valueText}</div>
         <div class="user-line" style="display: none;"></div>
-        <div class="user-place" style="display: none;">${place}</div>
+        <div class="user-place" style="display: none;">${place+1}</div>
     </div>`
 }
 
 const UserPlace = (alias, value) => {
-    const place = { 0: "5", 1: "3", 2: "1", 3: "2", 4: "4" }
+    const place = {
+        0: "5",
+        1: "3",
+        2: "1",
+        3: "2",
+        4: "4"
+    }
     return `
     <div class="userplace-template ${alias}-userplace">
         <div class="userplace-place">${value < 5 ? place[value] : Number(value)+1}</div>
@@ -47,7 +53,7 @@ const UserPlace = (alias, value) => {
 }
 
 const Leaders = (alias, data) => {
-    const place = selected(data["users"], data.selectedUserId)
+    const place = selected(data["users"], data.selectedUserId ? data.selectedUserId : -1)
     return `<div class="template-wrapper">
         <div class="leaders-wrapper__users">
          ${place < 5 ? data.users.slice(0, 5).map((item, index) => User(alias, item, data.selectedUserId, place, index, data.emoji)).join('') : data.users.slice(0, 4).map((item, index) => User(alias, item, data.selectedUserId, place, index, data.emoji)).join('') + [data.users[place]].map((item, index)=> User(alias, item, data.selectedUserId, place, index, data.emoji)).join('')}
@@ -59,7 +65,7 @@ const Leaders = (alias, data) => {
 }
 
 const renderTemplate = (alias, data) => {
-    
+
     return Template(alias, data).replace(/\s{2,}/g, '')
 }
 window.renderTemplate = renderTemplate
