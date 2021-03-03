@@ -74,14 +74,23 @@ export default {
 
 .invert_1
   filter: invert(1)
-.theme_light
-  background: #ffffff !important
-  color: $black !important
-.template
+body 
   width: 100vw
   height: 100vh
   background: radial-gradient(circle at 50% 50%, #120C01 0%, #000000 100%)
   color: $white
+  .user-img
+    img
+      filter: grayscale(100%)
+  .user-respect, .user-emoji
+    filter:  grayscale(0%) !important
+.theme_light
+  background: #ffffff !important
+  color: $black !important
+  .user-img
+    img
+      filter: grayscale(0%)
+.template
   &-title
     font-weight: 700
     font-size: 50px

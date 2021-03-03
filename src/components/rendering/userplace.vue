@@ -1,5 +1,5 @@
 <template>
-  <div class="userplace-template" :class="'userplace-template'+ '_' +theme">
+  <div class="userplace-template" >
     <div class="userplace-place" v-if="index == 0 && selected > 4">{{selected+1}}</div>
     <div class="userplace-place" v-else>{{place[index]}}</div>
   </div>
@@ -16,6 +16,15 @@ export default {
 };
 </script>
 <style lang="sass">
+.theme_light 
+    .userplace
+        &-template
+            color: #261C00
+            background: linear-gradient(-180deg, #F4F4F4 1%, #E9E9E9 100%, #EAEAEA 100%)
+            box-shadow: inset 0px 0px 20px 0px #CFCFCF,inset -1px 1px 1px 0px #FFFFFF
+            &:nth-child(3)
+                background: linear-gradient(-180deg, #FFF2D1 1%, #FFD66C 100%) !important
+                box-shadow: inset 0px 0px 20px 0px #FFB039,inset -1px 1px 1px 0px #FFFFFF !important 
 .userplace
     &-template
         display: flex
@@ -33,13 +42,6 @@ export default {
         border-top-left-radius: 6px
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) -2.22%, rgba(0, 0, 0, 0.8) 100%), radial-gradient(149.08% 95.38% at 38.75% 71.48%, #000000 0%, #231900 0.01%, #4D4D4D 100%)
         box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 16px rgba(103, 103, 103, 0.6)
-        &_light 
-            color: #261C00
-            background: linear-gradient(-180deg, #F4F4F4 1%, #E9E9E9 100%, #EAEAEA 100%)
-            box-shadow: inset 0px 0px 20px 0px #CFCFCF,inset -1px 1px 1px 0px #FFFFFF
-            &:nth-child(3)
-                background: linear-gradient(-180deg, #FFF2D1 1%, #FFD66C 100%) !important
-                box-shadow: inset 0px 0px 20px 0px #FFB039,inset -1px 1px 1px 0px #FFFFFF !important 
         &:nth-child(1), &:nth-child(2)
             padding-left: 42px
             padding-right: 52px

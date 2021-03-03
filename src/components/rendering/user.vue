@@ -8,16 +8,6 @@
           (index >= 3 && selected >= 3 && selected == index) ||
           (index == 4 && selected > index),
       },
-      {
-        'vote-selected_light':
-          alias == 'vote' && theme == 'light' && selUser
-            ? selUser.id == id
-            : '',
-      },
-      {
-        'vote-selected_dark':
-          alias == 'vote' && theme == 'dark' && selUser ? selUser.id == id : '',
-      },
       'user-template_' + theme,
     ]"
   >
@@ -59,13 +49,11 @@
       </div>
       <div
         class="user-line"
-        :class="'user-line' + '_' + theme"
         v-if="selected == index"
         style="display: none"
       ></div>
       <div
         class="user-place"
-        :class="'user-place' + '_' + theme"
         style="display: none"
         v-if="selected == index"
       >
@@ -95,12 +83,10 @@
       </div>
       <div
         class="user-line"
-        :class="'user-line' + '_' + theme"
         style="display: none"
       ></div>
       <div
         class="user-place"
-        :class="'user-place' + '_' + theme"
         style="display: none"
       >
         {{ selected + 1 }}
@@ -136,8 +122,6 @@ export default {
 };
 </script>
 <style lang="sass">
-.grayscale
-  filter: grayscale(100%)
 .user
   &-template
     box-sizing: border-box
@@ -145,10 +129,13 @@ export default {
     height: 162px
   &-emoji
     position: absolute
-    top: -5px
+    top: -10px
     display: block
     width: 34px
     height: 34px
+    left: 50% 
+    transform: translateX(-50%)
+    font-size: 37px
   &-img
     position: relative
     img
