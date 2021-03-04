@@ -127,7 +127,7 @@ export default {
     position: absolute
     top: -10px
     display: block
-    height: 32px
+    height: 30px
     left: 50% 
     transform: translateX(-50%)
     font-size: 37px
