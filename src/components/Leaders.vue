@@ -72,5 +72,5 @@ export default {
       bottom: -40%
     &:nth-child(1)
       left: 210px
-      bottom: -2%
+      bottom: 0
 </style>
