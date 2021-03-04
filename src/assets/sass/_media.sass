@@ -77,11 +77,11 @@
             display: none !important
         &:nth-child(2)
             height: 77%
-            left: 0px     
+            left: -5px     
         &:nth-child(3)
             left: 100px   
         &:nth-child(4)
-            left: 200px 
+            left: 205px 
     .leaders-wrapper__users
         .user-template
             &:nth-child(5),&:nth-child(4)
@@ -90,9 +90,9 @@
                 left: 106px
             &:nth-child(2)
                 bottom: -20%
-                left: 217px
+                left: 220px
             &:nth-child(3)
-                left: 0
+                left: -5px
                 bottom: -37%
                 
         .user-selected
@@ -173,7 +173,7 @@
     .template-title
         padding: 20px 52px 0 24px 
     .leaders-wrapper__users
-        flex-grow: 0.55
+        flex-grow: 0.54
     .user-selected
         bottom: -132% !important
 
@@ -300,7 +300,12 @@
         padding-top: 0
         &__category
             padding-top: 0
-
+@media (max-width: 320px)
+    .userplace-template
+        &:nth-child(2)
+            left: 0 !important
+        &:nth-child(4)
+            left: 200px 
 @media (max-width: 568px) and (max-height: 320px)
     .vote
         .user-template
