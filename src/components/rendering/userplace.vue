@@ -1,7 +1,9 @@
 <template>
-  <div class="userplace-template" >
-    <div class="userplace-place" v-if="index == 0 && selected > 4">{{selected+1}}</div>
-    <div class="userplace-place" v-else>{{place[index]}}</div>
+  <div class="userplace-template">
+    <div class="userplace-place" v-if="index == 0 && selected > 4">
+      {{ selected + 1 }}
+    </div>
+    <div class="userplace-place" v-else>{{ place[index] }}</div>
   </div>
 </template>
 <script>
@@ -16,7 +18,7 @@ export default {
 };
 </script>
 <style lang="sass">
-.theme_light 
+.theme_light
     .userplace
         &-template
             color: #261C00
@@ -24,7 +26,7 @@ export default {
             box-shadow: inset 0px 0px 20px 0px #CFCFCF,inset -1px 1px 1px 0px #FFFFFF
             &:nth-child(3)
                 background: linear-gradient(-180deg, #FFF2D1 1%, #FFD66C 100%) !important
-                box-shadow: inset 0px 0px 20px 0px #FFB039,inset -1px 1px 1px 0px #FFFFFF !important 
+                box-shadow: inset 0px 0px 20px 0px #FFB039,inset -1px 1px 1px 0px #FFFFFF !important
 .userplace
     &-template
         display: flex
@@ -73,11 +75,8 @@ export default {
             left: 300px
         &:nth-child(5)
             left: 400px
-        
+
     &-place
-        width: 20px
-        height: 32px
-        padding-left: 2px
         font-weight: 700
         position: absolute
         top: 18px
