@@ -13,7 +13,6 @@ function selected(users, id = -1) {
     return indexUser ? Number(indexUser) : -1
 }
 
-
 const Template = (alias, data) => {
     return `<div class="template ${alias}_template">
                 <div class="template-title ${alias}-title">${data.title}</div>
@@ -65,7 +64,6 @@ const Leaders = (alias, data) => {
 }
 
 const renderTemplate = (alias, data) => {
-
     return Template(alias, data).replace(/\s{2,}/g, '')
 }
 window.renderTemplate = renderTemplate

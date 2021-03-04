@@ -67,6 +67,7 @@
     .template-title
         padding: 20px 65px 0 65px
     .template-subtitle 
+    
         padding-left: 24px
         padding-right: 24px
     .leaders-wrapper__place, .leaders-wrapper__users
@@ -168,6 +169,7 @@
 @media (max-width: 377px)
     .template-title, .template-subtitle, .item__text 
         text-align: left
+        justify-content: flex-start !important
     .template-title
         padding: 20px 52px 0 24px 
     .leaders-wrapper__users
@@ -222,6 +224,12 @@
                 top: 72.5% !important
         .vote-button__wrapper
             height: 74vh
+@media (max-width: 668px)
+    .template-subtitle
+        height: 18px
+        display: flex
+        align-items: center
+        justify-content: center
 @media (max-width: 320px) and (max-height: 668px)
     .Activity
             padding: 0 !important

@@ -26,16 +26,12 @@
               : ''
           "
         />
-        <img
+        <div
           class="user-emoji"
-          src="@/assets/img/emoji/seeearch.svg"
-          v-if="index == 0 && emoji == '🔎' && alias == 'leaders'"
-        />
-        <img
-          class="user-emoji"
-          src="@/assets/img/emoji/crown.svg"
-          v-else-if="index == 0 && alias == 'leaders'"
-        />
+          v-if="index == 0">
+          {{emoji}}
+        </div>
+
       </div>
       <div class="user-name" :class="alias + '-name'" v-if="alias != 'chart'">
         {{ name.split(" ")[0] }} <br />
@@ -131,8 +127,7 @@ export default {
     position: absolute
     top: -10px
     display: block
-    width: 34px
-    height: 34px
+    height: 32px
     left: 50% 
     transform: translateX(-50%)
     font-size: 37px
