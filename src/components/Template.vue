@@ -90,6 +90,8 @@ body
   .user-img
     img
       filter: grayscale(0%)
+  .template-subtitle
+    color: $greylight !important
 .template
   &-title
     font-weight: 700
@@ -109,8 +111,6 @@ body
     line-height: 30px
     text-align: center
     color: $grey
-    &_light
-      color: $greylight
   &-wrapper
     display: flex
     flex-direction: column
