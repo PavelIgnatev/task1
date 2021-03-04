@@ -118,6 +118,9 @@ export default {
 };
 </script>
 <style lang="sass">
+.theme_light
+  .user-value
+    color: #BFBFBF
 .user
   &-template
     box-sizing: border-box
@@ -154,7 +157,7 @@ export default {
     font-size: 14px
     line-height: 16px
     text-align: center
-    color: #BFBFBF
+    color: #918F8A
   &-respect
     display: block
     position: absolute
