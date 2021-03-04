@@ -75,6 +75,9 @@ export default {
             left: 400px
         
     &-place
+        width: 20px
+        height: 32px
+        padding-left: 1px
         font-weight: 700
         position: absolute
         top: 18px
