@@ -1,23 +1,6 @@
 <template>
   <div id="app">
-    <Template
-      :theme="
-        this.$route.query['theme']
-          ? (theme = this.$route.query['theme'])
-          : 'dark'
-      "
-      :alias="
-        $store.state.data
-          ? $store.state.data[this.$route.query['slide'] - 1].alias
-          : ''
-      "
-      :data="
-        $store.state.data
-          ? $store.state.data[this.$route.query['slide'] - 1].data
-          : ''
-      "
-    >
-    </Template>
+    <div class="template leaders_template"><div class="template_title"><div class="template-title leaders-title">Самый 👪 командный разработчик</div><div class="template-subtitle leaders-subtitle">Спринт № 215</div></div><div class="template-wrapper"><div class="leaders-wrapper__users"><div class="user-template leaders-user "><div class="user-img leaders-img"><img src="/img/2.svg"><div class="user-emoji">👪</div></div><div class="user-name leaders-name">Александр<br>Шлейко</div><div class="user-value leaders-value">24 голоса</div><div class="user-line" style="display: none;"></div><div class="user-place" style="display: none;">4</div></div><div class="user-template leaders-user "><div class="user-img leaders-img"><img src="/img/3.svg"></div><div class="user-name leaders-name">Дарья<br>Ковалева</div><div class="user-value leaders-value">21 голос</div><div class="user-line" style="display: none;"></div><div class="user-place" style="display: none;">4</div></div><div class="user-template leaders-user "><div class="user-img leaders-img"><img src="/img/6.svg"></div><div class="user-name leaders-name">Андрей<br>Мокроусов</div><div class="user-value leaders-value">19 голосов</div><div class="user-line" style="display: none;"></div><div class="user-place" style="display: none;">4</div></div><div class="user-template leaders-user user-selected"><div class="user-img leaders-img"><img src="/img/7.svg"><img src="/img/respect.svg" class="user-respect"></div><div class="user-name leaders-name">Дмитрий<br>Андриянов</div><div class="user-value leaders-value">18 голосов</div><div class="user-line" style="display: none;"></div><div class="user-place" style="display: none;">4</div></div><div class="user-template leaders-user "><div class="user-img leaders-img"><img src="/img/1.svg"></div><div class="user-name leaders-name">Евгений<br>Дементьев</div><div class="user-value leaders-value">16 голосов</div><div class="user-line" style="display: none;"></div><div class="user-place" style="display: none;">4</div></div></div><div class="leaders-wrapper__place"><div class="userplace-template leaders-userplace"><div class="userplace-place">5</div></div><div class="userplace-template leaders-userplace"><div class="userplace-place">3</div></div><div class="userplace-template leaders-userplace"><div class="userplace-place">1</div></div><div class="userplace-template leaders-userplace"><div class="userplace-place">2</div></div><div class="userplace-template leaders-userplace"><div class="userplace-place">4</div></div></div></div></div>
   </div>
 </template>
 
