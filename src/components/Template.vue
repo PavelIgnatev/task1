@@ -74,6 +74,7 @@ export default {
 .template_title
   position: absolute
   top: 0
+  width: 100vw
 .invert_1
   filter: invert(1)
 body 
