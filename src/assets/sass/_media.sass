@@ -32,6 +32,7 @@
              bottom: -25%
         &:nth-child(2),  &:nth-child(3)
              bottom: -12.5%
+
 @media ( max-width:  567px)
     .day
         &__wrapper__center
@@ -52,7 +53,13 @@
             width: 320px
     .Activity
         padding-top: 38px
-    
+@media (width: 367px)
+    .userplace-template
+        &:nth-child(3) 
+            height: 346px !important
+            bottom: 89px !important
+        &:nth-child(4)
+            height: 385px !important
 @media (max-width: 667px)
     .theme_light
         .user-selected
@@ -81,11 +88,8 @@
             left: -4px     
         &:nth-child(3)
             left: 100px   
-            height: 346px
-            bottom: 89px
         &:nth-child(4)
             left: 204px 
-            height: 385px
     .leaders-wrapper__users
         .user-template
             &:nth-child(5),&:nth-child(4)
@@ -309,8 +313,6 @@
     .userplace-template
         &:nth-child(2)
             left: 0 !important
-        &:nth-child(4)
-            left: 200px 
 @media (max-width: 568px) and (max-height: 320px)
     .vote
         .user-template
@@ -373,5 +375,6 @@
                 margin-top: 17px !important
                 
                 
-    
+@media (max-width: 667px) and (max-height: 367px)
+
 
