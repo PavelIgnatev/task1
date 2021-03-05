@@ -32,7 +32,13 @@
              bottom: -25%
         &:nth-child(2),  &:nth-child(3)
              bottom: -12.5%
-
+@media (max-height: 667px)
+    .userplace-template
+        &:nth-child(3)
+            bottom: 0 !important 
+            height: 100% !important
+        &:nth-child(4)
+            height: 89% !important
 @media ( max-width:  567px)
     .day
         &__wrapper__center
@@ -53,10 +59,10 @@
             width: 320px
     .Activity
         padding-top: 38px
-@media (width: 367px) and (height: 668px)
+@media (width: 367px)
     .userplace-template
         &:nth-child(3) 
-            height: 346px !important
+            height: 345px !important
             bottom: 89px !important
         &:nth-child(4)
             height: 385px !important
@@ -87,7 +93,7 @@
             height: calc(77% + 1px)
             left: -4px     
         &:nth-child(3)
-            left: 100px   
+            left: 100px 
         &:nth-child(4)
             left: 204px 
     .leaders-wrapper__users
