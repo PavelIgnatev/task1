@@ -113,6 +113,10 @@ body
     color: $grey
   &-wrapper
     display: flex
+    position: absolute
     flex-direction: column
+    transform: translateX(-50%)
+    top: 88px
+    left: 50%
     height: 100vh
 </style>
