@@ -71,7 +71,9 @@ export default {
 </script>
 <style lang="sass">
 @import '@/assets/sass/_variables'
-
+.template_title
+  position: absolute
+  top: 0
 .invert_1
   filter: invert(1)
 body 
@@ -115,4 +117,5 @@ body
     display: flex
     flex-direction: column
     height: 100vh
+    margin-top: 110px
 </style>

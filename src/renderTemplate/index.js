@@ -15,8 +15,10 @@ function selected(users, id = -1) {
 
 const Template = (alias, data) => {
     return `<div class="template ${alias}_template">
-                <div class="template-title ${alias}-title">${data.title}</div>
-                <div class="template-subtitle ${alias}-subtitle">${data.subtitle}</div>
+                <div class="template_title"> 
+                    <div class="template-title ${alias}-title">${data.title}</div>
+                    <div class="template-subtitle ${alias}-subtitle">${data.subtitle}</div>
+                </div>
                 ${alias == 'leaders' ? Leaders(alias, data) : ''}
             </div>
         `

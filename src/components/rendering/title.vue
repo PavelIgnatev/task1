@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="template_title">
     <div class="template-title" :class="alias + '-title'">{{ data.title }}</div>
     <div
       :class="[
