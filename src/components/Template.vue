@@ -89,6 +89,7 @@ body
     filter:  grayscale(0%) !important
 
   .user-emoji
+    margin-top: 5px
     font-size: 32px
   .user-respect
     height: 40px
