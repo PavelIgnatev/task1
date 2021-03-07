@@ -38,6 +38,7 @@ export default {
         color: #FCFBF7
         width: 120px
         position: absolute
+        justify-content: center
         height: 100%
         background: white
         border-top-right-radius: 6px

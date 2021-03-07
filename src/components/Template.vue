@@ -1,5 +1,5 @@
 <template>
-  <div :class="['template', 'theme_' + theme, alias + '_template']">
+  <div :class="['template', alias + '_template']">
     <Title :alias="alias" :data="data" :theme="theme"></Title>
     <Leaders
       :alias="alias"

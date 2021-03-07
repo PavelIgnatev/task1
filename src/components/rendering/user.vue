@@ -9,7 +9,6 @@
           (index >= 3 && selected >= 3 && selected == index && alias != 'vote') ||
           (index == 4 && selected > index && alias != 'vote'),
       },
-      'user-template_' + theme,
       {'vote-selected': (alias == 'vote' && selUser.id == id)}
     ]"
   >
