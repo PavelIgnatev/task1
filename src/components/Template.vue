@@ -87,6 +87,9 @@ body
       filter: grayscale(100%)
   .user-respect, .user-emoji
     filter:  grayscale(0%) !important
+
+  .user-emoji
+    font-size: 32px
   .user-respect
     height: 40px
 .theme_light
