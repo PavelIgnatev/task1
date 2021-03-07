@@ -106,21 +106,21 @@ export default {
         border-radius: 6px
   .vote
     &-button__up_wrapper, &-button__down_wrapper
-      border: 2px solid #bfbfbf
+      border: 2px solid #f4b000
       &:hover
-        border: 2px solid #f4b000
+        border: 2px solid #bfbfbf
         .vote-button__up, .vote-button__down
-            background: #f4b000 !important
+            background: #bfbfbf !important
       .vote-button__up, .vote-button__down
-        background: #bfbfbf
+        background: #f4b000
         position: relative
         &::before, &::after
             background: white !important
   .vote-button__up_wrapper_not, .vote-button__down_wrapper_not
-      border: 2px solid #f4b000 !important
+      border: 2px solid #bfbfbf !important
       pointer-events: none !important
       .vote-button__up, .vote-button__down
-        background: #f4b000 !important
+        background: #bfbfbf !important
 .vote
     display: flex
     width: 100%
@@ -137,12 +137,12 @@ export default {
       transform: translate(-50%, -50%)
     &-button__up_wrapper, &-button__down_wrapper
         z-index: 10100
-        width: 55px
-        height: 55px
+        width: 54px
+        height: 54px
         border-radius: 100%
         background: white
         border: 2px solid #FCFBF7
-        padding: 4px
+        padding: 3px
         display: flex
         justify-content: center
         align-items: center
