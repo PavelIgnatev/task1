@@ -190,10 +190,6 @@ export default {
             transform: rotate(45deg)
             position: absolute
             right: 15px
-
-
-
-
     &-button__down
         transform: rotate(-180deg)
     &-selected
