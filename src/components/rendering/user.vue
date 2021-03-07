@@ -29,7 +29,7 @@
         />
         <div
           class="user-emoji"
-          v-if="index == 0">
+          v-if="index == 0 && alias != 'vote'">
           {{emoji}}
         </div>
 

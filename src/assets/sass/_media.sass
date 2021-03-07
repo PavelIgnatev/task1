@@ -58,16 +58,17 @@
     
 @media (max-width: 667px)
     .theme_light
-        .user-selected
-            .user
-                &-line
-                    display: block !important
-                    background: #261C00 !important
-                &-place
-                    display: block !important
-                    color: #261C00 !important
-                &-value
-                    color: #261C00 !important
+        .leaders-wrapper__users
+            .user-selected
+                .user
+                    &-line
+                        display: block !important
+                        background: #261C00 !important
+                    &-place
+                        display: block !important
+                        color: #261C00 !important
+                    &-value
+                        color: #261C00 !important
     .template-title
         padding: 20px 65px 0 65px
     .template-subtitle 
@@ -391,7 +392,11 @@
         .user-selected
             left: 108px !important
             transform: translateX(0) !important
-
+@media (max-width 667px)
+    .vote__mobile 
+        display: block !important
+    .vote__desktop
+        display: none !important
 @media (min-width: 667px) and (max-width: 668px)
     .template-wrapper
         height: calc(100vh - 110px) !important
