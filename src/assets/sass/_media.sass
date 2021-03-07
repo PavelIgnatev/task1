@@ -392,7 +392,7 @@
         .user-selected
             left: 108px !important
             transform: translateX(0) !important
-@media (max-width 667px)
+@media (max-width: 667px)
     .vote__mobile 
         display: block !important
     .vote__desktop
@@ -439,3 +439,106 @@
             left: 432px 
     .leaders-wrapper__place, .leaders-wrapper__users
         width: 536px
+
+    .vote
+        .user-template
+            transform: translate(0) !important
+            &:nth-child(1)
+                left: 32px !important
+                top: 156px !important
+            &:nth-child(2)
+                left: 167px !important
+                top: 83px !important
+            &:nth-child(3)
+                top: 83px !important
+                left: 397px !important
+            &:nth-child(4)
+                top: 156px !important
+                left: 532px !important
+            &:nth-child(5)
+                top: 229px !important
+                left: 167px !important
+            &:nth-child(6)
+                top: 229px !important
+                left: 397px !important
+        .vote-button__wrapper
+            position: static
+            transform: translateX(-100px)
+        .vote-button__up_wrapper
+            position: absolute
+            left: 402px
+            top: 135px
+        .vote-button__down_wrapper
+            position: absolute
+            left: 402px
+            top: 255px
+@media (max-width: 568px)
+    .vote-button__down_wrapper
+        margin-bottom: 40px
+    .vote
+        .user-template
+            transform: translate(0) !important
+            &:nth-child(1)
+                left: 15px !important
+            &:nth-child(2)
+                left: 129px !important
+            &:nth-child(3)
+                right: 129px !important
+                top: 40% !important
+                left: auto !important
+            &:nth-child(4)
+                right: 15px !important
+                top: 40% !important
+@media (min-width: 320px) and (max-width: 568px)
+    .vote
+        .vote-button__wrapper
+            display: block
+            width: 100vw
+            height: 100vh
+            transform: translate(0)
+            margin-top: 0
+            position: relative
+            top: 0
+            left: 0
+        .vote-button__up_wrapper
+            position: absolute
+            left: 50% !important
+            transform: translateX(-50%) !important
+            top: 165px !important
+        .vote-button__down_wrapper
+            position: absolute
+            left: 50% !important
+            transform: translateX(-50%) !important
+            top: 581px !important
+        .user-template
+            transform: translate(0) !important
+            &:nth-child(1)
+                left: 24px !important
+                top: 167px !important
+            &:nth-child(3)
+                right: 24px !important
+                left: auto !important
+                top: 167px !important
+            &:nth-child(2)
+                left: 50% !important
+                transform: translateX(-50%) !important
+                top: 252px !important
+            &:nth-child(4)
+                left: 24px !important
+                top: 334px !important
+            &:nth-child(5)
+                left: 50% !important
+                transform: translateX(-50%) !important
+                top: 416px !important
+            &:nth-child(6)
+                right: 24px !important
+                left: auto !important
+                top: 334px !important
+            &:nth-child(7)
+                left: 24px !important
+                top: 501px !important
+            &:nth-child(8)
+                right: 24px !important
+                left: auto !important
+                top: 501px !important
+                

@@ -102,6 +102,8 @@ body
   .template-subtitle
     color: $greylight !important
 .template
+  width: 100vw 
+  height: 100vh
   &-title
     font-weight: 700
     font-size: 50px

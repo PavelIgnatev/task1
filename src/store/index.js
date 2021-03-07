@@ -15,10 +15,6 @@ const store = new Vuex.Store({
       Object.keys(data).map(item => data[item].alias != 'vote' ? '' : data[item].data.offset ? data[item].data.offset = 4 : data[item].data.offset = 4)
       state.data = data
     },
-    renderTemplate(state, data){
-        state.data[router.history.current.query['slide']-1].alias = data[0]
-        state.data[router.history.current.query['slide']-1].data = data[1]
-    },
     offsetChange(state, data){
       state.data[data[0]].data.selectedUserId = data[1]
       state.data[data[0]+1].data.selectedUserId = data[1]
@@ -29,14 +25,6 @@ const store = new Vuex.Store({
     offChangeMinus(state, slide){
       state.data[slide].data.offset -= 1
     }
-  },
-  getters: {
-    isStateData(state){
-      return Object.keys(state.data).length
-    },
-    aliasAnddata(state){
-      return [state.data[router.history.current.query['slide']-1].alias, state.data[router.history.current.query['slide']-1].data]
-    }
-  },
+  }
 })
 export default store
