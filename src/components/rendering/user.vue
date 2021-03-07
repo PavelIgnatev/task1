@@ -1,14 +1,16 @@
 <template>
+  
   <div
     class="user-template"
     @click="changeSelected"
     :class="[
       {
         'user-selected':
-          (index >= 3 && selected >= 3 && selected == index) ||
-          (index == 4 && selected > index),
+          (index >= 3 && selected >= 3 && selected == index && alias != 'vote') ||
+          (index == 4 && selected > index && alias != 'vote'),
       },
       'user-template_' + theme,
+      {'vote-selected': (alias == 'vote' && selUser.id == id)}
     ]"
   >
     <template v-if="index != 4 || selected < 4 || alias != 'leaders'">

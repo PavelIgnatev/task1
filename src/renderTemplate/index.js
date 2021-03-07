@@ -1,9 +1,3 @@
-import store from '@/store'
-import data2 from '../data/data.json'
-const renderTemplateAll = (data) => store.commit("renderTemplateAll", data)
-renderTemplateAll(data2)
-window.renderTemplateAll = renderTemplateAll
-
 function selected(users, id = -1) {
     const indexUser = Object.keys(users).find(
         (item) =>
@@ -49,8 +43,7 @@ const UserPlace = (alias, value) => {
     return `
     <div class="userplace-template ${alias}-userplace">
         <div class="userplace-place">${value < 5 ? place[value] : Number(value)+1}</div>
-    </div>
-`
+    </div>`
 }
 
 const Leaders = (alias, data) => {

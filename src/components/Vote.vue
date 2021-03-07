@@ -205,11 +205,10 @@ export default {
     &-button__down
         transform: rotate(-180deg)
     &-selected
-        &_dark
-            background: radial-gradient(91.67% 122.17% at 69.17% -11.17%, #FFA300 0%, #2D1C00 100%) !important
-            box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.4), inset 0px 6px 15px rgba(255, 162, 0, 0.4) !important
-            border-radius: 6px
-            cursor: pointer
+        background: radial-gradient(91.67% 122.17% at 69.17% -11.17%, #FFA300 0%, #2D1C00 100%) !important
+        box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.4), inset 0px 6px 15px rgba(255, 162, 0, 0.4) !important
+        border-radius: 6px !important
+        cursor: pointer !important 
         &_light
             background: linear-gradient(180deg, #FFF2D1 0.82%, #FFD66C 100%) !important
             box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.8) !important
