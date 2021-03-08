@@ -193,12 +193,15 @@
 
 @media (max-width: 568px) and (max-height: 320px)
         .leaders-wrapper__users
-            flex-grow: 0.85 !important
+            flex-grow: 0.6 !important
         .template-title
             font-size: 26px !important
             padding: 20px 20px 0 20px
         .userplace-place
             top: 8px
+            
+        .user-template:nth-child(2)
+            bottom: -30%
         .user-template:nth-child(3)
             bottom: -30% !important
         .user-template:nth-child(1)
@@ -395,9 +398,7 @@
     .vote__desktop
         display: none !important
 
-@media (min-width: 735px) and (max-width: 736px)
-    .leaders-wrapper__users
-        flex-grow: 1
+
 @media (min-width: 667px) and (max-width: 668px)
     .template-wrapper
         height: calc(100vh - 110px) !important
@@ -426,8 +427,20 @@
             left: 312px
         &:nth-child(5) 
             left: 416px
+    .vote, .leaders-wrapper__users
+        .user-template
+            &:nth-child(1)
+                left: 50% 
+                transform: translateX(-50%)
+            &:nth-child(3)
+                left: 104px   
+            &:nth-child(2)
+                left: 328px 
+            &:nth-child(4)
+                left: 432px 
     .leaders-wrapper__place, .leaders-wrapper__users
         width: 536px
+
     .vote
         .user-template
             transform: translate(0) !important
@@ -462,15 +475,7 @@
             position: absolute
             left: 402px
             top: 255px
-    
 @media (max-width: 568px)
-    .leaders-wrapper__users
-        .user-selected
-            bottom: -120% !important
-    .userplace-template:nth-child(3)
-        bottom: 75px
-    .template-wrapper
-        margin-top: 90px !important
     .vote-button__down_wrapper
         margin-bottom: 40px
     .vote
@@ -487,7 +492,7 @@
             &:nth-child(4)
                 right: 15px !important
                 top: 40% !important
-@media (min-width: 320px) and (max-width: 568px) and (min-height: 569px)
+@media (min-width: 320px) and (max-width: 568px)
     .vote
         .vote-button__wrapper
             display: block
