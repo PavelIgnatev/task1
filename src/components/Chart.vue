@@ -1,5 +1,5 @@
 <template>
-  <div class="chart" :class="'chart_' + theme">
+  <div class="chart">
     <div class="chart-container">
       <div class="chart-pillars">
         <Charts
@@ -12,7 +12,7 @@
           :value="value.value"
           :active="value.active"
           :theme="theme"
-          :style="`height: ${heightt(value.value) ? heightt(value.value) : 0}%`"
+          :height="heightt(value.value) ? heightt(value.value) : 0"
         ></Charts>
       </div>
     </div>
@@ -72,6 +72,8 @@ export default {
 };
 </script>
 <style lang="sass">
+.chart-name
+  padding: 0
 .chart
     flex-grow: 1
     width: 100%
@@ -112,33 +114,28 @@ export default {
                 opacity: 0.3
                 position: absolute
                 right: 0
-        &_light
-            &:nth-child(1)
-                &::after
-                    content: ''
-                    width: 2px
-                    height: 100%
-                    background:  #BFBFBF
-                    opacity: 0.3
-                    position: absolute
-                    right: 0
         &:nth-child(2)
             margin-left: 16px
     .chart-user__wrapper
         display: flex
         justify-content: center
-        margin-bottom: 30px
+        margin-bottom: 24px
+        margin-top: 24px
     &-container
         flex-grow: 1
         width: 100%
         position: relative
         display: flex
         align-items: center
+        padding-top: 78px
     &-pillars
+        box-sizing: border-box
         width: 100%
         display: flex
-        height: 70%
+        height: 100%
         justify-content: space-between
         align-items: flex-end
         padding: 0 58px
+        padding-top: 63px
+        padding-bottom: 30px
 </style>

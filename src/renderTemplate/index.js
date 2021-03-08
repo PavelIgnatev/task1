@@ -1,6 +1,6 @@
 import Leaders from './Leaders.js'
 import Vote from './Vote.js'
-
+import Chart from './Chart.js'
 const Template = (alias, data) => {
     return `<div class="template ${alias}_template">
                 <div class="template_title"> 
@@ -9,6 +9,7 @@ const Template = (alias, data) => {
                 </div>
                 ${alias == 'leaders' ? Leaders(alias, data) : ''}
                 ${alias == 'vote' ? Vote(alias, data) : ''}
+                ${alias == 'chart' ? Chart(alias, data) : ''}
             </div>
         `
 }
@@ -16,6 +17,5 @@ const Template = (alias, data) => {
 
 const renderTemplate = (alias, data) => {
     return Template(alias, data).replace(/\s{2,}/g, '')
-    //.replace(/\s{2,}/g, '')
 }
 window.renderTemplate = renderTemplate
