@@ -17,6 +17,7 @@
       :emoji="data.emoji"
       :selUser="data.users[selected] ? data.users[selected] : ''"
     ></User>
+
     <div class="vote-button__wrapper">
       <div
         class="vote-button__up_wrapper"
@@ -27,7 +28,7 @@
                 .offset == 0,
           },
         ]"
-        @click="down"
+        @click="offChange(-1)"
       >
         <div class="vote-button__up"></div>
       </div>
@@ -41,7 +42,7 @@
                   .offset,
           },
         ]"
-        @click="up"
+        @click="offChange(1)"
       >
         <div
           class="vote-button__down"
@@ -63,11 +64,8 @@ export default {
     };
   },
   methods: {
-    up() {
-      this.$store.commit("offChangePlus", this.$route.query["slide"] - 1);
-    },
-    down() {
-      this.$store.commit("offChangeMinus", this.$route.query["slide"] - 1);
+    offChange(value) {
+      this.$store.commit("offChange", [this.$route.query["slide"] - 1, value]);
     },
     updateWidth() {
     this.width = window.innerWidth;

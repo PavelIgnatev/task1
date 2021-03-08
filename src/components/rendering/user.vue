@@ -109,7 +109,7 @@ export default {
   methods: {
     changeSelected() {
       if (this.alias == "vote") {
-        this.$store.commit("offsetChange", [
+        this.$store.commit("selectedUser", [
           this.$route.query["slide"] - 1,
           this.id,
         ]);

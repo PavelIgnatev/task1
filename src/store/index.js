@@ -15,16 +15,12 @@ const store = new Vuex.Store({
       Object.keys(data).map(item => data[item].alias != 'vote' ? '' : data[item].data.offset ? data[item].data.offset = 4 : data[item].data.offset = 4)
       state.data = data
     },
-    offsetChange(state, data){
+    selectedUser(state, data){
       state.data[data[0]].data.selectedUserId = data[1]
       state.data[data[0]+1].data.selectedUserId = data[1]
     },
-    offChangePlus(state, slide){
-      state.data[slide].data.offset += 1
-    },
-    offChangeMinus(state, slide){
-      state.data[slide].data.offset -= 1
-    }
-  }
+    offChange(state, data){
+      state.data[data[0]].data.offset += data[1]
+  }}
 })
 export default store
