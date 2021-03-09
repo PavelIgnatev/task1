@@ -20,7 +20,7 @@ const Chart = (alias, data) => {
     return `<div class="chart">
         <div class="chart-container">
             <div class="chart-pillars">
-            ${data.values.slice(4,13).map(item => bobber(item.title, item.value, item.active ? item.active : false, height(item.value))).join(' ')}
+            ${data.values.slice(4,13).map(item => bobber(item.title, item.value != 0 ? item.value : "", item.active ? item.active : false, height(item.value))).join(' ')}
             </div>
         </div>
         <div class="chart-user__wrapper">

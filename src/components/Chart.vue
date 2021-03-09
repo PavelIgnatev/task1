@@ -9,7 +9,7 @@
           )"
           :key="index"
           :title="value.title"
-          :value="value.value"
+          :value="value.value != 0 ? value.value: ''"
           :active="value.active"
           :theme="theme"
           :height="heightt(value.value) ? heightt(value.value) : 0"
@@ -106,6 +106,8 @@ export default {
             white-space: nowrap
             line-height: 18px
         &:nth-child(1)
+            position: absolute
+            left: 0
             &::after
                 content: ''
                 width: 2px
@@ -113,14 +115,19 @@ export default {
                 background:  #918F8A
                 opacity: 0.3
                 position: absolute
-                right: 0
+                right: -16px
         &:nth-child(2)
-            margin-left: 16px
+            position: absolute
+            right: 0
     .chart-user__wrapper
+        margin: 0 auto
+        width: 474px
+        height: 40px
         display: flex
         justify-content: center
         margin-bottom: 24px
         margin-top: 24px
+        position: relative
     &-container
         flex-grow: 1
         width: 100%
