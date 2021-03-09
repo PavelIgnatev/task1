@@ -74,6 +74,15 @@ export default {
 <style lang="sass">
 .chart-name
   padding: 0
+
+.theme_light
+  .chart
+    .user-template
+      &:nth-child(1)
+        &::after
+          background: #BFBFBF !important
+.chart-name
+  padding-top: 1px
 .chart
     flex-grow: 1
     width: 100%
@@ -97,7 +106,7 @@ export default {
         .user-value
             position: absolute
             left: 53px
-            top: 20px
+            top: 22px
         .chart-user-name
             font-weight: 500
             font-size: 16px
