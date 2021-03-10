@@ -141,6 +141,7 @@ export default {
       display: block
       width: 64px
       border-radius: 50%
+    margin-bottom: 6px
     padding: 20px 20px 0 20px
   &-name
     font-style: normal
