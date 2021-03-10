@@ -5,7 +5,7 @@ const User = (alias, user, selectedUserId = -1, place = -2, index, emoji) => {
         <img src="/img/${user["avatar"].split('.')[0]}.svg">
         ${(selectedUserId == user['id'] && place != 0) || (selectedUserId == user['id'] && alias=='vote') ? '<img src="/img/respect.svg" class="user-respect" >' : index == 0 ? `<div class="user-emoji" style="${alias=='vote' || alias == 'chart'?'display: none;':''}">${emoji}</div>` : ''}
         </div>
-        <div class="user-name ${alias}-name">${user.name.split(' ')[0]} ${alias == 'chart' ? '&nbsp' : '<br>'} ${user.name.split(' ')[1]}</div>
+        <div class="user-name ${alias}-name">${alias == 'chart' ? '' : user.name.split(' ')[0]} ${alias == 'chart' ? user.name : ''} ${alias == 'chart' ? '' : user.name.split(' ')[1]}</div>
         <div class="user-value ${alias}-value" style="${alias=='vote'?'display: none;':''}">${user.valueText}</div>
         <div class="user-line" style="display: none;"></div>
         <div class="user-place" style="display: none;">${place+1}</div>

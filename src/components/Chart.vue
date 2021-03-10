@@ -106,7 +106,7 @@ export default {
         .user-value
             position: absolute
             left: 53px
-            top: 22px
+            top: 20px
         .chart-user-name
             font-weight: 500
             font-size: 16px
@@ -124,7 +124,7 @@ export default {
                 background:  #918F8A
                 opacity: 0.3
                 position: absolute
-                right: -16px
+                right: -18px
         &:nth-child(2)
             position: absolute
             right: 0
