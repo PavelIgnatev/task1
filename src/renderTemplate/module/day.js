@@ -14,7 +14,7 @@ const day = (value, index, mobile=false) => {
       index % 2 == 0 ? hours + value[index + 1] : undefined
     )
     .filter((x) => x !== undefined);
-    if(mobile){return `<div class="day">${value.map((item, index) => `<div class="day__hour_wrapper" style="top: ${index * 17.2}px"><div class="day__hour"><img style="z-index: ${index}" class="day__img_dark" src="${item == 1 || item == 2? middark : item == 3 || item == 4 ? maxdark : item > 4 ? extradark : mindark}"><img class="day__img_light" style="z-index: ${index};display: none;" src="${item == 1 || item == 2? midlight : item == 3 || item == 4 ? maxlight : item > 4 ? extralight : minlight}"></div></div>`).join(' ')}</div>`}
+    if(mobile){return `<div class="day">${value.map((item, index) => `<div class="day__hour_wrapper" style="top: ${index * 16.72}px"><div class="day__hour"><img style="z-index: ${index}" class="day__img_dark" src="${item == 1 || item == 2? middark : item == 3 || item == 4 ? maxdark : item > 4 ? extradark : mindark}"><img class="day__img_light" style="z-index: ${index};display: none;" src="${item == 1 || item == 2? midlight : item == 3 || item == 4 ? maxlight : item > 4 ? extralight : minlight}"></div></div>`).join(' ')}</div>`}
     return `<div class="day">${changeValue.map((item, index) => `<div class="day__hour_wrapper" ><div class="day__hour"><img class="day__img_dark" src="${item == 1 || item == 2? middark : item == 3 || item == 4 ? maxdark : item > 4 ? extradark : mindark}"><img class="day__img_light" style="z-index: ${index};display: none;" src="${item == 1 || item == 2? midlight : item == 3 || item == 4 ? maxlight : item > 4 ? extralight : minlight}"></div></div>`).join(' ')}</div>`
 }
 export default day

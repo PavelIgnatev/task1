@@ -22,15 +22,15 @@ const Activity = (alias, data) =>{
       </div>
       <div class="Activity-item">
         <div class="item__example"></div>
-        <div class="item__text">1-2</div>
+        <div class="item__text">1 — 2</div>
       </div>
       <div class="Activity-item">
         <div class="item__example"></div>
-        <div class="item__text">3-4</div>
+        <div class="item__text">3 — 4</div>
       </div>
       <div class="Activity-item">
         <div class="item__example"></div>
-        <div class="item__text">5-6</div>
+        <div class="item__text">5 — 6</div>
       </div>
     </div>
     </div>`
