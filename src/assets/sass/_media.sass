@@ -36,10 +36,41 @@
         &:nth-child(2),  &:nth-child(3)
              bottom: -12.5%
 @media ( max-width:  567px)
+    .mobile
+        display: block !important
+    .desktop
+        display: none !important
     .day
         &__wrapper__center
-            width: 255px !important
-            height: 302px !important
+            width: 328px !important
+            height: 438px !important
+            top: 117px !important
+            .day
+                display: block
+                height: 100% !important
+                width: 43.74px !important
+                top: 0
+                &:nth-child(2)
+                    left: 43.74px
+                &:nth-child(3)
+                    left: 87.48px
+                &:nth-child(4)
+                    left: 131.22px
+                &:nth-child(5)
+                    left: 174.96px
+                &:nth-child(6)
+                    left: 218.7px
+                &:nth-child(7)
+                    left: 262.44px              
+            .day__hour
+                width: 43.73px
+                height: 43.73px
+                img
+                    width: 43.73px
+            .day__hour_wrapper
+                &:nth-child(even)
+                    left: 23px
+                    
         &:nth-child(even)
             left: auto
         &__hour
@@ -53,9 +84,6 @@
                 width: 34px
         .Activity__description
             width: 320px
-    .Activity
-        padding-top: 38px
-    
 @media (max-width: 667px)
     .theme_light
         .leaders-wrapper__users
@@ -206,9 +234,7 @@
             bottom: -30% !important
         .user-template:nth-child(1)
             bottom: -5%
-@media (max-height: 389px)
-    .day__wrapper
-            padding-bottom: 25px !important
+
 @media (max-height: 360px)
     .day__wrapper
             padding-bottom: 20px !important

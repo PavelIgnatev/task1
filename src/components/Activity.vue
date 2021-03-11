@@ -8,7 +8,6 @@
   
         :theme="theme"
         :data="changeList(day)"
-        :style="sizeX > 567 ? `top: ${(14*index)+30}px` :`left: ${34  *index}px;` "
       ></DayGraph>
       </div>
     </div>
@@ -86,37 +85,39 @@ export default {
     display: flex
     flex-direction: column
 .Activity
-    padding: 18px 24px 58px 24px
     flex-grow: 1
     display: flex
     flex-direction: column
     .day__wrapper
         display: flex
         flex-grow: 1
-        padding-bottom: 52px
         justify-content: center
         align-items: center
+        position: relative
         img
           display: block
           width: 34px
         &__center
-            flex-grow: 0 !important
             width: 425px
-            height: 150px
-            position: relative
-
+            height: 112px
+            position: absolute
+            top: 136px 
+            left: 50% 
+            transform: translateX(-50%)
     &__description
         display: flex
         width: 332px
+        height: 38px
         margin: 0 auto
         justify-content: space-between
         text-align: center
+        padding-bottom: 58px
         .Activity-item
             display: flex
             justify-content: space-between
             flex-direction: column
             width: 60px
-            height: 48px
+            height: 38px
             .item
                 &__example
                     width: 60px
@@ -139,17 +140,16 @@ export default {
                     margin-left: 4px
                     position: relative
                     border-radius: 0px
-                    &_dark
-                        background: radial-gradient(51.52% 129.57% at 48.48% 50%, rgba(64, 59, 54, 0) 0%, rgba(19, 18, 17, 0.5) 100%)
-                        box-shadow: inset 0px -1px 2px rgba(255, 255, 255, 0.25), inset 3px 1px 16px rgba(112, 102, 94, 0.3)
-                        &::before, &::after
-                            content: ''
-                            position: absolute
-                            width: 4px
-                            height: 12px
-                            background: radial-gradient(150% 252.96% at 150% 50%, rgba(64, 59, 54, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%)
-                            box-shadow: inset 0px -1px 2px rgba(255, 255, 255, 0.25), inset 3px 1px 16px rgba(112, 102, 94, 0.3)
-                            border-radius: 2px
+                    background: radial-gradient(51.52% 129.57% at 48.48% 50%, rgba(64, 59, 54, 0) 0%, rgba(19, 18, 17, 0.5) 100%)
+                    box-shadow: inset 0px -1px 2px rgba(255, 255, 255, 0.25), inset 3px 1px 16px rgba(112, 102, 94, 0.3)
+                    &::before, &::after
+                      content: ''
+                      position: absolute
+                      width: 4px
+                      height: 12px
+                      background: radial-gradient(150% 252.96% at 150% 50%, rgba(64, 59, 54, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%)
+                      box-shadow: inset 0px -1px 2px rgba(255, 255, 255, 0.25), inset 3px 1px 16px rgba(112, 102, 94, 0.3)
+                      border-radius: 2px
                     &_light
                         background: radial-gradient(2408.25% 2730.55% at 89.06% 78.28%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%)
                         box-shadow: inset -1px 0px 2px rgba(255, 255, 255, 0.2), inset 1px 1px 16px rgba(103, 103, 103, 0.2)
@@ -162,40 +162,36 @@ export default {
                             box-shadow: inset -1px 0px 2px rgba(255, 255, 255, 0.2), inset 1px 1px 16px rgba(103, 103, 103, 0.2)
                             border-radius: 2px
                     &::before
-                        left: -4px
-                        top: -4px
+                      left: -4px
+                      top: -4px
                     &::after
-                        right: -4px
-                        top: -4px
+                      right: -4px
+                      top: -4px
             &:nth-child(2)
                 .item__example
-                    &_dark
-                        background: radial-gradient(3906.1% 3815.36% at 89.06% 78.28%, rgba(19, 17, 16, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%)
-                        box-shadow: inset -1px 0px 2px rgba(255, 255, 255, 0.2), inset 1px 1px 16px rgba(112, 102, 94, 0.2)
+                    background: radial-gradient(3906.1% 3815.36% at 89.06% 78.28%, rgba(19, 17, 16, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%)
+                    box-shadow: inset -1px 0px 2px rgba(255, 255, 255, 0.2), inset 1px 1px 16px rgba(112, 102, 94, 0.2)
                     &_light
                         background: radial-gradient(2408.25% 2730.55% at 89.06% 78.28%, rgba(250, 250, 250, 0.6) 0%, rgba(250, 250, 250, 0.6) 100%)
                         box-shadow: inset -1px 0px 2px rgba(250, 250, 250, 0.2), inset 1px 1px 16px rgba(106, 106, 106, 0.2)
             &:nth-child(3)
                 .item__example
-                    &_dark
-                        background: radial-gradient(5752.25% 5190.32% at 74.43% 60.32%, rgba(0, 0, 0, 0.9) 0%, rgba(35, 22, 0, 0.9) 0.01%, rgba(112, 92, 94, 0.9) 100%)
-                        box-shadow: inset -1px 0px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 10px rgba(93, 116, 141, 0.6)
+                    background: radial-gradient(5752.25% 5190.32% at 74.43% 60.32%, rgba(0, 0, 0, 0.9) 0%, rgba(35, 22, 0, 0.9) 0.01%, rgba(112, 92, 94, 0.9) 100%)
+                    box-shadow: inset -1px 0px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 10px rgba(93, 116, 141, 0.6)
                     &_light
                         background: radial-gradient(2408.25% 2730.55% at 89.06% 78.28%, rgba(250, 250, 250, 0.8) 0%, rgba(250, 250, 250, 0.8) 100%)
                         box-shadow: inset -1px 0px 12px rgba(250, 250, 250, 0.2), inset 1px 1px 20px rgba(106, 106, 106, 0.3)
             &:nth-child(4)
                 .item__example
-                    &_dark
-                        background: radial-gradient(5528.36% 3005.63% at 74.43% 75.84%, rgba(0, 0, 0, 0.9) 0%, rgba(33, 22, 2, 0.9) 0.01%, rgba(172, 113, 9, 0.9) 100%)
-                        box-shadow: inset -1px 1px 14px rgba(255, 255, 255, 0.2), inset 2px 2px 10px rgba(242, 159, 13, 0.2)
+                    background: radial-gradient(5528.36% 3005.63% at 74.43% 75.84%, rgba(0, 0, 0, 0.9) 0%, rgba(33, 22, 2, 0.9) 0.01%, rgba(172, 113, 9, 0.9) 100%)
+                    box-shadow: inset -1px 1px 14px rgba(255, 255, 255, 0.2), inset 2px 2px 10px rgba(242, 159, 13, 0.2)
                     &_light
                         background: radial-gradient(68.1% 68.1% at 4.41% 31.9%, #FFF6DD 8.72%, #FFFEFA 100%)
                         box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.4)
             &:nth-child(5)
                 .item__example
-                    &_dark
-                        background: radial-gradient(2258.03% 620.37% at 83.33% 88.95%, #201502 0%, #C7830A 100%)
-                        box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 10px rgba(242, 159, 13, 0.9)
+                    background: radial-gradient(2258.03% 620.37% at 83.33% 88.95%, #201502 0%, #C7830A 100%)
+                    box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 10px rgba(242, 159, 13, 0.9)
                     &_light
                         background: radial-gradient(66.02% 86.49% at -16.18% 13.51%, rgba(255, 186, 6, 0.85) 0%, #FFF2AD 100%)
                         box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.4)
