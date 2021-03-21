@@ -7,7 +7,7 @@
             sizeX < 569 ? 7 : sizeX > 1424 ? 2 : sizeX > 569 ? 4 : '',
             Object.keys(data.values).length - (sizeX > 1424 ? 0 : 3)
           )"
-          :key="index"
+          :key="value.value + index"
           :title="value.title"
           :value="value.value != 0 ? value.value: ''"
           :active="value.active"
@@ -41,25 +41,23 @@ export default {
   data() {
     return {
       begin: 4,
-      max: -Infinity,
-      min: Infinity,
       sizeX: window.screen.width,
     };
   },
-  mounted() {
-    Object.keys(this.data.values).map((item) =>
+  methods: {
+    heightt(o) {
+      this.max = -Infinity
+      this.min = Infinity
+      Object.keys(this.data.values).map((item) =>
       this.data.values[item].value > this.max
         ? (this.max = this.data.values[item].value)
         : ""
-    );
-    Object.keys(this.data.values).map((item) =>
+      );
+      Object.keys(this.data.values).map((item) =>
       this.data.values[item].value < this.min
         ? (this.min = this.data.values[item].value)
         : ""
     );
-  },
-  methods: {
-    heightt(o) {
       return ((o - this.min) * 100) / (this.max - this.min);
     },
   },

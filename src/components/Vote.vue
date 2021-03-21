@@ -88,20 +88,21 @@ export default {
 </script>
 <style lang="sass">
 .theme_light
-  .user-template
-    &:hover
-      background: linear-gradient(180deg, rgba(244, 244, 244, 0.9) 0.82%, #E9E9E9 100%, rgba(234, 234, 234, 0) 100%) !important
-      box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(207, 207, 207, 0.5) !important
-      border-radius: 6px
-  .vote-selected
-      background: linear-gradient(180deg, #FFF2D1 0.82%, #FFD66C 100%) !important
-      box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.8) !important
-      border-radius: 6px
-      cursor: pointer
+  .vote
+    .user-template
       &:hover
+        background: linear-gradient(180deg, rgba(244, 244, 244, 0.9) 0.82%, #E9E9E9 100%, rgba(234, 234, 234, 0) 100%) !important
+        box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(207, 207, 207, 0.5) !important
+        border-radius: 6px
+    .vote-selected
         background: linear-gradient(180deg, #FFF2D1 0.82%, #FFD66C 100%) !important
         box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.8) !important
         border-radius: 6px
+        cursor: pointer
+        &:hover
+          background: linear-gradient(180deg, #FFF2D1 0.82%, #FFD66C 100%) !important
+          box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.8) !important
+          border-radius: 6px
   .vote
     &-button__up_wrapper, &-button__down_wrapper
       border: 2px solid #f4b000
