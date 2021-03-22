@@ -2,6 +2,8 @@ import Leaders from './Leaders.js'
 import Vote from './Vote.js'
 import Chart from './Chart.js'
 import Activity from './Activity.js'
+import Diagram from './Diagram.js'
+
 const Template = (alias, data) => {
     return `<div class="template ${alias}_template">
                 <div class="template_title"> 
@@ -12,6 +14,7 @@ const Template = (alias, data) => {
                 ${alias == 'vote' ? Vote(alias, data) : ''}
                 ${alias == 'chart' ? Chart(alias, data) : ''}
                 ${alias == 'activity' ? Activity(alias, data) : ''}
+                ${alias == 'diagram' ? Diagram(alias, data) : ''}
             </div>
         `
 }

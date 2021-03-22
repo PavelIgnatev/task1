@@ -1,10 +1,10 @@
 <template>
     <div class="Diagram-category" >
-        <div class="Diagram__wrapper_1">
+        <div class="Diagram__wrapper_cat">
             <div class="Diagram-category__circle" :class="'Diagram-category__circle_'+index"></div>
             <div class="Diagram-category__title">{{title}}</div>
         </div>
-        <div class="Diagram__wrapper_1">
+        <div class="Diagram__wrapper_cat">
             <div class="Diagram-category__text">{{differenceText.split(' ')[0]}}</div>
             <div class="Diagram-category__value">{{valueText.split(' ')[0]}}</div>
         </div>
@@ -91,7 +91,7 @@ export default {
             &_3
                 background: radial-gradient(100% 100% at 50% 0%, rgba(62, 62, 62, 0.5) 0%, rgba(40, 40, 40, 0.5) 100%)
                 box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5)
-    &__wrapper_1, &__wrapper_2
+    &__wrapper_cat
         align-items: center
         display: flex
 </style>
