@@ -19,7 +19,7 @@ export default {
 <style lang="sass">
 .theme_light
     .Diagram
-        &-category
+        &
   
             &__circle
                 &_0
@@ -40,8 +40,9 @@ export default {
         width: 304px
         box-sizing: border-box
         justify-content: space-between
-        padding: 16px 0
+        padding: 16px 0 18px 0
         position: relative
+        align-items: center
         &::after
             content: ''
             width: 100% 

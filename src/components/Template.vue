@@ -80,7 +80,7 @@ export default {
 body 
   width: 100vw
   height: 100vh
-  background: radial-gradient(circle at 50% 50%, #120C01 0%, #000000 100%)
+  background: radial-gradient(70.24% 70.24% at 49.87% 29.76%, rgba(19, 14, 0, 0.9) 0%, #000000 100%)
   color: $white
   .user-img
     img
