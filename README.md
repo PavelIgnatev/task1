@@ -51,14 +51,14 @@
 1. Клонировать репозиторий
 
     ```sh
-    git clone https://github.com/PavelIgnatev/task1.git
-    cd task1
+    git clone https://github.com/PavelIgnatev/yndx-stories.git
+    cd yndx-stories
     ```
 
 2. Установить зависимости
 
     ```sh
-    npm ci
+    npm install
     ```
 
 3. Запустить dev-сервер
