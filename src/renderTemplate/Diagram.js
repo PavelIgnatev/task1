@@ -1,7 +1,6 @@
 import DiagramCategory from './module/category.js'
 
 const Diagram = (alias, data) => {
-    console.log(data)
     return `<div class="Diagram">
     <svg width="0" height="0" style="position:absolute;"><defs>
     <filter id="filter0_ii_light" x="163.523" y="18.578" width="76.477" height="108.58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
